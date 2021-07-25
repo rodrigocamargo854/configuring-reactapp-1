@@ -129,6 +129,102 @@ No index.thml na pasta public inserir a tag de script
 
 Rodar o comando yarn webpack
 
+## 🍬 Dicas Plus 
+Para que não necessite ter a tag script no index.html referenciando o bundle.js, podemos injeta-lo dentro do webpack.config.js, para isso siga os seguintes passos.
+
+🖥️Utilize o comando para instalar o pacote html webpack
+
+```
+
+yarn add html-webpack-plugin -D
+
+```
+
+Dentro do arquivo webpack.config.js criar uma constante HTMLWebpackPlugin
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c3fb695-5cb6-4549-9480-1889ad1ac19a/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c3fb695-5cb6-4549-9480-1889ad1ac19a/Untitled.png) 
+
+No mesmo arquivo adicionar um objeto de configuração chamada plugins
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a489ed92-75de-491b-bd94-6cc66f729bc1/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a489ed92-75de-491b-bd94-6cc66f729bc1/Untitled.png)
+
+Rodar o comando yarn webpack para teste
+
+## 🖥️ Configurando o dev server
+
+Vamos instalar o dev server com o comando 
+
+```
+yarn add webpack-dev-server -D
+```
+Dentro do arquivo webpack.config.js inserir a propriedade devServer
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4dbc0eb4-68f5-4a31-9ffa-de8af1e21ead/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4dbc0eb4-68f5-4a31-9ffa-de8af1e21ead/Untitled.png)
+
+
+rodar o comando 
+```
+yarn webpack serve
+
+```
+Agora a aplicação estara rodando em http://localhost:8080/
+
+## 🛠️ Utilizando source maps 
+PAra ter acesso ao codigo original e verificação de erros.
+Ainda no arquivo webpack.config.js, adicionar dentro de module.exports o objeto devtools
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fc8e2bfa-5189-498f-b53f-51c60ae55862/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fc8e2bfa-5189-498f-b53f-51c60ae55862/Untitled.png)
+
+## 🛠️ Configurando ambeinte de desenvolvimento e ambiente de produção 
+
+Criar a variavel de ambiente
+
+instalar o pacode cross env
+
+```
+yarn add cross-env -D
+```
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/23985a04-6813-4e38-90bc-d2ee4e9e70cc/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/23985a04-6813-4e38-90bc-d2ee4e9e70cc/Untitled.png)
+
+
+No arquivo package.json criar os scripts
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/988e7243-c204-43bd-998b-a8a2f6b2a8f9/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/988e7243-c204-43bd-998b-a8a2f6b2a8f9/Untitled.png)
+
+A partir deste passo podemos utilizar o comando util
+```
+yarn dev
+```
+Para rodar a aplicação em ambiente de desenvolvimento e  para ambiente de produção 
+```
+yarn build
+```
+## 🛠️ Configurando a importação de arquivos css e sass (estilização)
+
+Instalar os loaders style-loader e css loader
+```
+yarn add style-loader css-loader
+```
+
+Adicionar dentro de rules:
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2181ceab-5bd3-4323-902d-315982f10004/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2181ceab-5bd3-4323-902d-315982f10004/Untitled.png)
+
+Configuração do SASS
+![https://sass-lang.com/]
+
+
+```
+yarn add node-sass -D
+```
+
+```
+yarn add sass-loader -D
+```
+
+
+
 ## 🛠️ Construído com
 
 * [Visual Studio Code](https://code.visualstudio.com/download) - IDE
