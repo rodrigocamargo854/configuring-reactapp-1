@@ -142,9 +142,9 @@ yarn add html-webpack-plugin -D
 
 Dentro do arquivo webpack.config.js criar uma constante HTMLWebpackPlugin
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c3fb695-5cb6-4549-9480-1889ad1ac19a/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c3fb695-5cb6-4549-9480-1889ad1ac19a/Untitled.png) 
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c3fb695-5cb6-4549-9480-1889ad1ac19a/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c3fb695-5cb6-4549-9480-1889ad1ac19a/Untitled.png)
 
-No mesmo arquivo adicionar um objeto de configuração chamada plugins
+No mesmo arquivo adicionar um objeto de configuração chamda plugins
 
 ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a489ed92-75de-491b-bd94-6cc66f729bc1/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a489ed92-75de-491b-bd94-6cc66f729bc1/Untitled.png)
 
