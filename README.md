@@ -192,7 +192,7 @@ No arquivo package.json criar os scripts
 
 ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/988e7243-c204-43bd-998b-a8a2f6b2a8f9/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/988e7243-c204-43bd-998b-a8a2f6b2a8f9/Untitled.png)
 
-A partir deste passo podemos utilizar o comando util
+A partir deste passo podemos utilizar o comando 
 ```
 yarn dev
 ```
@@ -207,7 +207,7 @@ Instalar os loaders style-loader e css loader
 yarn add style-loader css-loader
 ```
 
-Adicionar dentro de rules:
+No arquivo webpack.config.js adicionar dentro de rules:
 
 ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2181ceab-5bd3-4323-902d-315982f10004/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2181ceab-5bd3-4323-902d-315982f10004/Untitled.png)
 
