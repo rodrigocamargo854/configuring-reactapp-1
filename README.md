@@ -1,46 +1,133 @@
-# Olimpo
+# Configurando uma aplicação react sem utilizar o create-react-app
 
-Está aplicação tem como objetivo efetuar a leitura dos e-mails provenientes de um sistema externo por meio do Microsoft Graph.
+ESte repositório contêm a configuração passo a passo de uma aplicação react sem utilizar o o pacote create-react-app.
+
 
 ## 🚀 Começando
 
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+Antes de prosseguir na leitura desse artigo, é necessário que a versão 10.x ou superior do NodeJS esteja instalada em sua máquina. Caso não tenha NodeJS instalado, acesse o link abaixo e faça download do instalador.
 
-### 📋 Pré-requisitos
+### [Node.js](https://nodejs.org/en/)
 
-Você deve ter o SDK do .NET Core instalado em seu computador de desenvolvimento. 
+### [Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine.](https://nodejs.org/en/)
 
-Você também deve ter uma conta pessoal da Microsoft com uma caixa de correio Outlook.com.
+[nodejs.org](https://nodejs.org/en/)
 
-### 🔧 Instalação
+Assim que o NodeJS for instalado, o Node Package Manager (npm) também deverá estar disponível em sua máquina. Para verificar se instalação foi bem sucedida, execute os seguintes comandos no CMD ou Terminal:
 
-## Azure Active Directory
-Registrar o aplicativo no portal: https://aad.portal.azure.com
-Você criará um novo aplicativo do Azure AD usando o centro de administração do Azure Active Directory.
+```
+node --version
+npm --version
+```
+Crie um diretorio com o nome que desejar, criarei um diretório chamado meuApp
 
-Abra um navegador, navegue até o centro de administração do Azure Active Directory e faça logon usando uma conta pessoal (também conhecida como conta da Microsoft) ou Conta Corporativa.
+![https://cdn-images-1.medium.com/max/800/1*K2YxWClaABNu3AQT7iSEgg.png](https://cdn-images-1.medium.com/max/800/1*K2YxWClaABNu3AQT7iSEgg.png)
 
-Selecione Azure Active Directory na navegação esquerda e selecione Registros de aplicativos em Gerenciar.
-Selecione Novo registro. Na página Registrar um aplicativo, defina os valores da seguinte forma.
+Após a criação do diretório, digite ***code .*** para abrir o vscode dentro deste diretório.
 
-Defina Tipos de conta com suporte para Contas em qualquer diretório organizacional e contas pessoais da Microsoft.
-Em URI de redirecionamento, altere o menu suspenso para cliente público (Desktop & móvel) e defina https://login.microsoftonline.com/common/oauth2/nativecliento valor como.
+Utilizar o comando ***yarn init -y*** para criação do arquivo **package.json3**
 
-Inicialize o repositório de segredo de desenvolvimento do .net abrindo sua CLI no diretório que contém GraphConsumer.csproj e executando o comando a seguir.
+Utilizaremos o comando ***yarn*** para carregar todos os modulos do node (node_modules).
 
-```dotnet restore```
-```dotnet run```
+Para isso digite *yarn* e aguarde a instalação.
 
-## ⚙️ Executando os testes
+Caso o comando yarn não seja reconhecido, instale com o comando
 
-Abrir pasta AmbevTech.Olimpo.UnitTests no terminal e exucutar o comando a seguir.
+***npm install -g yarn***
 
-```dotnet test```
+![https://cdn-images-1.medium.com/max/800/1*yOvq1cSuQbpN3IFUMEcQ6A.png](https://cdn-images-1.medium.com/max/800/1*yOvq1cSuQbpN3IFUMEcQ6A.png)
 
-## 💻 Tecnologias Utilizadas
+![https://cdn-images-1.medium.com/max/800/1*PupVI_3qyoL-Zn9T1RRRhg.png](https://cdn-images-1.medium.com/max/800/1*PupVI_3qyoL-Zn9T1RRRhg.png)
 
-<img alt="C#" src="https://img.shields.io/badge/c%23%20-%23239120.svg?&style=for-the-badge&logo=c-sharp&logoColor=white&style=Plastic"/>
+Utilizararemos o comando ***yarn add react-dom***
 
+para a comunicação com a árvore de elementos.
+
+Criaremos dois diretórios, um diretório **src** e outro **public**.
+
+![https://cdn-images-1.medium.com/max/800/1*meu7MThdHVwx657HsO_h8g.png](https://cdn-images-1.medium.com/max/800/1*meu7MThdHVwx657HsO_h8g.png)
+
+Dentro do diretório **public** criaremos um arquivo *index.html*
+
+Podemos digitar html para criarmos a estrutura inicial da página
+
+![https://cdn-images-1.medium.com/max/800/1*ztDXPV7y9R-T8FIsPWlqAg.png](https://cdn-images-1.medium.com/max/800/1*ztDXPV7y9R-T8FIsPWlqAg.png)
+
+Dentro da estrutura do index.html , inserir
+
+<div *id*=’root’></div>
+
+![https://cdn-images-1.medium.com/max/800/1*bDXDxtAvFfOoCAsd3COHcA.png](https://cdn-images-1.medium.com/max/800/1*bDXDxtAvFfOoCAsd3COHcA.png)
+
+Essa div será referência no index.jsx dentro da pasta src do projeto.
+
+Dentro da pasta src, criaremos dois arquivos jsx
+
+![https://cdn-images-1.medium.com/max/1200/1*nE_C_k55KKs2mCzEDz_07Q.png](https://cdn-images-1.medium.com/max/1200/1*nE_C_k55KKs2mCzEDz_07Q.png)
+
+**App.jsx**
+
+![https://cdn-images-1.medium.com/max/1200/1*spxlzKwWsgOQ7WLV85tO0g.png](https://cdn-images-1.medium.com/max/1200/1*spxlzKwWsgOQ7WLV85tO0g.png)
+
+**index.jsx**
+
+![https://cdn-images-1.medium.com/max/800/1*sGUveIRoa3zZ8Y26hf5PNA.png](https://cdn-images-1.medium.com/max/800/1*sGUveIRoa3zZ8Y26hf5PNA.png)
+
+Agora instaremos alguns pacotes necessários para a configuração do ambiente.
+
+### **BABEL**
+
+O Babel auxiliará a conversão do nosso código para que todo ambiente da aplicação entenda
+
+instalação:
+
+Instalaremos o babl/core, babel/cli, babel/preset-env , lembrando que todos estes pacotes serão instalados no ambiente de desenvolvimento.
+
+Para isso utilizaremos o comando
+
+***yarn add [@babel/core](http://twitter.com/babel/core) [@babel/cli](http://twitter.com/babel/cli) [@babel/preset-env](http://twitter.com/babel/preset-env) -D***
+
+Criar o arquivo
+
+**babel.config.js**
+
+Dentro do arquivo inserir a configuração
+
+![https://cdn-images-1.medium.com/max/800/1*FKTRwZlJu6Nhe3vlV0510Q.png](https://cdn-images-1.medium.com/max/800/1*FKTRwZlJu6Nhe3vlV0510Q.png)
+
+Renomear o arquivo index.jsx para index.js e executar o comando
+
+***yarn babel src/index.js — out-file dist/bundle.js***
+
+Com isso será criado um diretório dist, dentro deste diretório será criado a conversão do arquivo js.
+
+Para que possamos converter diretamente arquivos jsx, utilizaremos o comando
+
+***yarn add [@babel/preset-react](http://twitter.com/babel/preset-react) -D***
+
+Mudar op comando de conversão para
+
+yarn babel src/index.**jsx** — out-file dist/bundle.js
+
+### **Configuração do WEBPACK**
+
+Criar arquivo webpack.config.js
+
+![https://cdn-images-1.medium.com/max/800/1*o8af5UnIwqBS6bCNeKI8aw.png](https://cdn-images-1.medium.com/max/800/1*o8af5UnIwqBS6bCNeKI8aw.png)
+
+Este arquivo deve ter o seguinte conteudo
+
+![https://cdn-images-1.medium.com/max/800/1*HeHP31_KVQx-Ux0qStnMUg.png](https://cdn-images-1.medium.com/max/800/1*HeHP31_KVQx-Ux0qStnMUg.png)
+
+Dentro do arquivo index.jsx importar a função render
+
+![https://cdn-images-1.medium.com/max/800/1*5hcOr_ZUbzm7HJFVU7Jo8g.png](https://cdn-images-1.medium.com/max/800/1*5hcOr_ZUbzm7HJFVU7Jo8g.png)
+
+No index.thml na pasta public inserir a tag de script
+
+![https://cdn-images-1.medium.com/max/800/1*uq8hwZ1i39RRveGZFk7stQ.png](https://cdn-images-1.medium.com/max/800/1*uq8hwZ1i39RRveGZFk7stQ.png)
+
+Rodar o comando yarn webpack
 
 ## 🛠️ Construído com
 
@@ -51,5 +138,3 @@ Abrir pasta AmbevTech.Olimpo.UnitTests no terminal e exucutar o comando a seguir
 1.0.0 Beta
 
 ## 📄 Licença
-
-Este projeto está sob a licença da AmbevTech.
