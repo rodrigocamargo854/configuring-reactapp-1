@@ -1,4 +1,4 @@
-# Olimpo
+# Configuração de uma aplicação react sem utilizar o crete-react-app
 
 Está aplicação tem como objetivo efetuar a leitura dos e-mails provenientes de um sistema externo por meio do Microsoft Graph.
 
